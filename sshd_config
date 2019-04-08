@@ -1,0 +1,19 @@
+# https://linux-audit.com/audit-and-harden-your-ssh-configuration/
+
+# The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
+# but this is overridden so installations will only check .ssh/authorized_keys
+AuthorizedKeysFile .ssh/authorized_keys
+
+# Ignore rhosts
+IgnoreRhosts yes
+
+UseDNS yes
+
+# Disable password ssh access
+PasswordAuthentication no
+
+# Enable public key authentication
+PubkeyAuthentication yes
+
+# Disable root login via ssh
+PermitRootLogin no
