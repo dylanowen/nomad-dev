@@ -17,3 +17,8 @@ PubkeyAuthentication yes
 
 # Disable root login via ssh
 PermitRootLogin no
+
+# Remap the HostKey locations to allow easier volume mounting
+HostKey /etc/ssh/keys/ssh_host_ecdsa_key
+HostKey /etc/ssh/keys/ssh_host_ed25519_key
+HostKey /etc/ssh/keys/ssh_host_rsa_key

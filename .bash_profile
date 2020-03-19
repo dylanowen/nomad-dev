@@ -1,14 +1,16 @@
 # Path Setup
 
+# Cargo https://github.com/rust-lang/cargo
 PATH="$PATH:$HOME/.cargo/bin"
-
+# Bloop https://scalacenter.github.io/bloop/
+PATH="$PATH:$HOME/.bloop"
 
 # Aliases
 # Port Checking
 port() {
    sudo lsof -Pni :"$1"
 }
-
+alias code='cd ~/code'
 
 # Git Prompt https://gist.github.com/michaelneu/943693f46f7aa249fad2e6841cd918d5
 COLOR_GIT_CLEAN='\[\033[1;30m\]'
@@ -44,7 +46,7 @@ PROMPT_COMMAND=prompt
 
 
 # Gradle Wrapper Alias
-function gw () {
+function gw() {
   local dir=$PWD
   while [[ $dir != '/' && ! -x $dir/gradlew ]]
   do
@@ -59,3 +61,5 @@ function gw () {
 }
 
 cd ~/code
+
+# exec nvim -v 'terminal'

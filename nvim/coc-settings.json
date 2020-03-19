@@ -1,8 +1,10 @@
 {
    "languageserver": {
-      "scala": {
+      "metals": {
          "command": "metals-vim",
-         "filetypes": ["scala"]
+         "trace.server": "verbose",
+         "rootPatterns": ["build.sbt"],
+         "filetypes": ["scala", "sbt"]
       }
    }
 }
